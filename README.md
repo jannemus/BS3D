@@ -2,7 +2,7 @@
 
 Implementation of the reconstruction framework from: <br>
 *BS3D: Building-scale 3D Reconstruction from RGB-D Images* [[arXiv](https://arxiv.org/pdf/2301.01057.pdf)] <br> <br>
-The BS3D dataset is provided in [Section 2](#2.-bs3d-dataset).
+The BS3D dataset is provided in [Section 2](#2-bs3d-dataset).
 
 # 1. Reconstruction framework
 
