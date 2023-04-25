@@ -1,6 +1,6 @@
 # BS3D: Building-scale 3D Reconstruction from RGB-D Images
 
-Implementation of the reconstruction framework from: <br>
+Implementation of the reconstruction framework presented in: <br>
 *BS3D: Building-scale 3D Reconstruction from RGB-D Images* [[arXiv](https://arxiv.org/pdf/2301.01057.pdf)] <br> <br>
 The BS3D dataset is provided in [Section 2](#2-bs3d-dataset).
 
@@ -22,9 +22,9 @@ Preprocess-MKV is needed for extracting and processing the MKV files captured us
 In the following example, Visual Studio 2015 is used to compile Preprocess-MKV. Open the Visual Studio command prompt (Start -> VS2015 x64 Native Tools Command Prompt). To compile:
 
 `
-cd preprocess-mkv/build
-cmake -G"Visual Studio 15 2017 Win64" ..
-cmake --build . --config Release --target install
+cd preprocess-mkv/build <br>
+cmake -G"Visual Studio 15 2017 Win64" .. <br>
+cmake --build . --config Release --target install <br>
 `
 
 ## 1.3 Data capture
@@ -42,16 +42,16 @@ Put your recordings (e.g. A1.mkv, A2.mkv, ...) to the *mydataset/mkv* folder.
 Extract images (color, depth, infrared), inertial measurements, point clouds, and calibration information from the MKV files using `preprocess.py`. The code will also undistort the images and perform color-to-depth alignment (C2D). The command: <br>
 `python preprocess.py datasets/mydataset`
 
-will process all MKV files and write data to *mydataset/preprocessed/$*$/*, where $*$ is the name of the MKV file. RTAB-Map configuration files will also be written to *mydataset/rtabmap/*.
+will process all MKV files and write data to *mydataset/preprocessed/\*/*, where * is the name of the MKV file. RTAB-Map configuration files will also be written to *mydataset/rtabmap/*.
 
 **Note** If you just want to extract data, you can provide arguments `--undistort false` and `--c2d false`.
 
 ## 1.5 Single-session mapping
-Launch RTAB-Map and load configuration from *mydataset/rtabmap/$*$/single-session-config.ini*, where $*$ is the session name. <br>
+Launch RTAB-Map and load configuration from *mydataset/rtabmap/\*/single-session-config.ini*, where * is the session name. <br>
 `Preferences -> Load settings (*.ini)`
 This will automatically set paths to calibration, color images and depth maps.
 
-Initialize database `File -> New database` and press start. After the reconstruction has finished, check that the map looks good. If it does, close the database (.db) to save it to *mydataset/rtabmap/$*$/map.db* If you have multiple sessions, process and save each of them. Make sure you name each database *map.db*.
+Initialize database `File -> New database` and press start. After the reconstruction has finished, check that the map looks good. If it does, close the database (.db) to save it to *mydataset/rtabmap/\*/map.db* If you have multiple sessions, process and save each of them. Make sure you name each database *map.db*.
 
 If you only have a single session, export camera poses to *mydataset/rtabmap/poses.txt* <br>
 `File -> Export poses -> RGBD-SLAM format (*.txt) -> Frame: Camera` <br>
