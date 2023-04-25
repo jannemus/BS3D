@@ -26,8 +26,9 @@ In the following example, Visual Studio 2015 is used to compile Preprocess-MKV. 
     cmake --build . --config Release --target install
 
 ## 1.3 Data capture
-Azure Kinect SDK includes a recorder application (k4arecorder.exe) that is called from `record.py`. Record one or more sequences by running: <br>
-`python record.py output.mkv`
+Azure Kinect SDK includes a recorder application (k4arecorder.exe) that is called from `record.py`. Record one or more sequences by running:
+
+    python record.py output.mkv
 
 Put your recordings (e.g. A1.mkv, A2.mkv, ...) to the *mydataset/mkv* folder.
 
@@ -38,6 +39,7 @@ Put your recordings (e.g. A1.mkv, A2.mkv, ...) to the *mydataset/mkv* folder.
 
 ## 1.4 Preprocess MKVs
 Extract images (color, depth, infrared), inertial measurements, point clouds, and calibration information from the MKV files using `preprocess.py`. The code will also undistort the images and perform color-to-depth alignment (C2D). The command:
+
     python preprocess.py datasets/mydataset
 
 will process all MKV files and write data to *mydataset/preprocessed/\*/*, where * is the name of the MKV file. RTAB-Map configuration files will also be written to *mydataset/rtabmap/*.
