@@ -37,8 +37,8 @@ Put your recordings (e.g. A1.mkv, A2.mkv, ...) to the *mydataset/mkv* folder.
 - Although Azure Kinect has a fairly good depth range and FoV, avoid pointing the camera towards a view that has insufficient geometry (e.g. large and completely empty lobby or corridor).
 
 ## 1.4 Preprocess MKVs
-Extract images (color, depth, infrared), inertial measurements, point clouds, and calibration information from the MKV files using `preprocess.py`. The code will also undistort the images and perform color-to-depth alignment (C2D). The command: <br>
-`python preprocess.py datasets/mydataset`
+Extract images (color, depth, infrared), inertial measurements, point clouds, and calibration information from the MKV files using `preprocess.py`. The code will also undistort the images and perform color-to-depth alignment (C2D). The command:
+    python preprocess.py datasets/mydataset
 
 will process all MKV files and write data to *mydataset/preprocessed/\*/*, where * is the name of the MKV file. RTAB-Map configuration files will also be written to *mydataset/rtabmap/*.
 
@@ -73,12 +73,12 @@ after which you need to export poses again.
 
 ## 1.7 Surface reconstruction
 Perform surface reconstruction using TSDF fusion: <br>
-`python surface_reconstruction.py datasets/mydataset configs/tsdf.yaml` <br>
+    python surface_reconstruction.py datasets/mydataset configs/tsdf.yaml
 The output mesh (.ply) will be written to *mydataset/reconstruction/mesh*.
 
 ## 1.8 Render images
 Render depth maps and surface normals from the mesh: <br>
-`python render.py datasets/mydataset configs/render.yaml` <br>
+    python render.py datasets/mydataset configs/render.yaml
 The output data will be written to *mydataset/reconstruction*.
 
 
