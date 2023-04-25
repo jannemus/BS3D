@@ -136,3 +136,13 @@ The sequences used in the visual-inertial odometry experiments are available bel
 We scanned a lobby and corridors using FARO 3D X 130 laser scanner as shown in the figure below. The FARO point cloud can be downloaded [here](https://unioulu-my.sharepoint.com), Azure Kinect MKVs [here](https://unioulu-my.sharepoint.com), and the reconstruction (2 Hz) [here](https://unioulu-my.sharepoint.com).
 
 <img src="images/laserscan.jpg" width="400">
+
+## Citation
+If you use this repository in your research, please consider citing:
+
+    @article{mustaniemi2023bs3d,
+      title={BS3D: Building-scale 3D Reconstruction from RGB-D Images},
+      author={Mustaniemi, Janne and Kannala, Juho and Rahtu, Esa and Liu, Li and Heikkil{\"a}, Janne},
+      journal={arXiv preprint arXiv:2301.01057},
+      year={2023}
+    }
