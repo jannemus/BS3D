@@ -21,11 +21,9 @@ Preprocess-MKV is needed for extracting and processing the MKV files captured us
 
 In the following example, Visual Studio 2015 is used to compile Preprocess-MKV. Open the Visual Studio command prompt (Start -> VS2015 x64 Native Tools Command Prompt). To compile:
 
-`
-cd preprocess-mkv/build <br>
-cmake -G"Visual Studio 15 2017 Win64" .. <br>
-cmake --build . --config Release --target install <br>
-`
+    cd preprocess-mkv/build
+    cmake -G"Visual Studio 15 2017 Win64" ..
+    cmake --build . --config Release --target install
 
 ## 1.3 Data capture
 Azure Kinect SDK includes a recorder application (k4arecorder.exe) that is called from `record.py`. Record one or more sequences by running: <br>
