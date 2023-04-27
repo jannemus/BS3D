@@ -19,9 +19,10 @@ This software has been tested on **Windows 10**, but it should be compatible wit
 ## 1.2 Install Preprocess-MKV
 Preprocess-MKV is needed for extracting and processing the MKV files captured using Azure Kinect. Make sure you have installed the Azure Kinect SDK (see prerequisites). You also need [OpenCV 4.3.0](https://opencv.org/) (or later) and [CMake 3.18.2](https://cmake.org/download/) (or later).
 
-In the following example, Visual Studio 2015 is used to compile Preprocess-MKV. Open the Visual Studio command prompt (Start -> VS2015 x64 Native Tools Command Prompt). To compile:
+In the following example, Visual Studio 2017 is used to compile Preprocess-MKV. Open the Visual Studio command prompt (Start -> VS2015 x64 Native Tools Command Prompt). To compile:
 
-    cd preprocess-mkv/build
+    mkdir preprocess\build
+    cd preprocess\build
     cmake -G"Visual Studio 15 2017 Win64" ..
     cmake --build . --config Release --target install
 
