@@ -16,6 +16,9 @@ This software has been tested on **Windows 10**, but it should be compatible wit
 - Install RTAB-Map from [here](https://github.com/introlab/rtabmap/releases) (version 0.20.16, latest)
 - Install Preprocess-MKV (instructions below)
 
+    git clone https://github.com/jannemus/BS3D.git
+    cd BS3D
+
 ## 1.2 Install Preprocess-MKV
 Preprocess-MKV is needed for extracting and processing the MKV files captured using Azure Kinect. Make sure you have installed the Azure Kinect SDK (see prerequisites). You also need [OpenCV 4.3.0](https://opencv.org/) (or later) and [CMake 3.18.2](https://cmake.org/download/) (or later).
 
