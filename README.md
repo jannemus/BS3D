@@ -16,6 +16,7 @@ This software has been tested on **Windows 10**, but it should be compatible wit
 - Install RTAB-Map from [here](https://github.com/introlab/rtabmap/releases) (version 0.20.16, latest)
 - Install Preprocess-MKV (instructions below)
 
+Clone the repository:
 
     git clone https://github.com/jannemus/BS3D.git
     cd BS3D
