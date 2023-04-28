@@ -82,14 +82,14 @@ after which you need to export poses again.
 ## 1.7 Surface reconstruction
 Perform surface reconstruction using TSDF fusion:
 
-    python surface_reconstruction.py datasets/mydataset configs/meshing_config.yaml
+    python surface_reconstruction.py datasets/mydataset
     
 The output mesh (.ply) will be written to *mydataset/reconstruction/mesh*.
 
 ## 1.8 Render images
 Render depth maps and surface normals from the mesh:
 
-    python render.py datasets/mydataset configs/render_config.yaml
+    python render.py datasets/mydataset
 
 The output data will be written to *mydataset/reconstruction*.
 
