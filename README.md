@@ -82,14 +82,14 @@ after which you need to export poses again.
 ## 1.7 Surface reconstruction
 Perform surface reconstruction using TSDF fusion:
 
-    python surface_reconstruction.py datasets/mydataset configs/tsdf.yaml
+    python surface_reconstruction.py datasets/mydataset configs/meshing_config.yaml
     
 The output mesh (.ply) will be written to *mydataset/reconstruction/mesh*.
 
 ## 1.8 Render images
 Render depth maps and surface normals from the mesh:
 
-    python render.py datasets/mydataset configs/render.yaml
+    python render.py datasets/mydataset configs/render_config.yaml
 
 The output data will be written to *mydataset/reconstruction*.
 
@@ -101,20 +101,20 @@ An overview of the data is shown in the table below. Download links and details 
 
 | Data                 | Resolution |   Format   | Description                                            |
 | :------------------- | :--------- |:-----------|:-------------------------------------------------------|
-| color/\*.jpg         | 720 x 1280 | 24-bit JPG | Color images (undistorted). Filename represents <br /> timestamp in seconds. |
-| depth/\*.png         | 720 x 1280 | 16-bit PNG | Sensor depth in millimeters (invalid depth equals 0). <br /> Filename represents timestamp in seconds.|
-| normal_render/\*.png | 720 x 1280 | 24-bit PNG | Surface normals rendered from mesh. Invalid normal equals (0,0,0). <br /> Filename represents timestamp in seconds. |
-| depth_render/\*.png  | 720 x 1280 | 16-bit PNG | Depth rendered from mesh in millimeters (invalid depth equals 0). <br /> Filename represents timestamp in seconds. |
-| infrared/\*.png      | 512 x 512  | 16-bit PNG | Infrared images. Note that some normalization is needed <br /> at least for visualization. |
-| depth_raw/\*.png     | 512 x 512  | 16-bit PNG | Raw sensor depth in millimeters (invalid depth equals 0). <br /> Filename represents timestamp in seconds. |
-| calibration/calib_color.yaml |    | YAML        | Color camera intrinsics and extrinsics between color and <br /> infrared camera.|
-| calibration/calib_infrared.yaml | | YAML        | Infrared camera intrinsics and extrinsics between color and <br /> infrared camera.|
-| poses/poses_color.txt |           | TXT        | Color camera poses (camera-to-world) in the RGBD SLAM format: <br /> timestamp, tx, ty, tz, qx, qy, qz, qw |
-| poses/poses_infrared.txt |        | TXT        | Infrared camera poses (camera-to-world) in the RGBD SLAM format: <br /> timestamp, tx, ty, tz, qx, qy, qz, qw |
-| imu/imu.csv          |            | CSV        | Accelerometer and gyroscope readings sampled at 1.6 kHz. <br /> Format: timestamp (s), w_xyz (rad/s) a_xyz (m/s^2)|
+| color/\*.jpg         | 720 x 1280 | 24-bit JPG | Color images (undistorted). Filename represents timestamp in seconds. |
+| depth/\*.png         | 720 x 1280 | 16-bit PNG | Sensor depth in millimeters (invalid depth equals 0). Filename represents timestamp in seconds.|
+| normal_render/\*.png | 720 x 1280 | 24-bit PNG | Surface normals rendered from mesh. Invalid normal equals (0,0,0). Filename represents timestamp in seconds. |
+| depth_render/\*.png  | 720 x 1280 | 16-bit PNG | Depth rendered from mesh in millimeters (invalid depth equals 0). Filename represents timestamp in seconds. |
+| infrared/\*.png      | 512 x 512  | 16-bit PNG | Infrared images. Note that some normalization is needed at least for visualization. |
+| depth_raw/\*.png     | 512 x 512  | 16-bit PNG | Raw sensor depth in millimeters (invalid depth equals 0). Filename represents timestamp in seconds. |
+| calibration/calib_color.yaml |    | YAML        | Color camera intrinsics and extrinsics between color and infrared camera.|
+| calibration/calib_infrared.yaml | | YAML        | Infrared camera intrinsics and extrinsics between color and infrared camera.|
+| poses/poses_color.txt |           | TXT        | Color camera poses (camera-to-world) in the RGBD SLAM format: timestamp, tx, ty, tz, qx, qy, qz, qw |
+| poses/poses_infrared.txt |        | TXT        | Infrared camera poses (camera-to-world) in the RGBD SLAM format: timestamp, tx, ty, tz, qx, qy, qz, qw |
+| imu/imu.csv          |            | CSV        | Accelerometer and gyroscope readings sampled at 1.6 kHz. Format: timestamp (s), w_xyz (rad/s) a_xyz (m/s^2)|
 | imu/calibration.yaml |            | YAML       | IMU-camera extrinsics (e.g. between gyro and color camera). |
 | mesh/mesh.ply        |            | PLY        | Triangle mesh created from raw depth maps (simplified). |
-| laserscan/gt.ply     |            | PLY        | Ground truth point cloud obtained using a laser scanner. <br /> Note that this is not always available.
+| laserscan/gt.ply     |            | PLY        | Ground truth point cloud obtained using a laser scanner. Note that this is not always available.
 
 ## 2.2 Raw recordings
 If you need the original recordings (.mkv), those can be downloaded from [here](https://unioulu-my.sharepoint.com/:f:/g/personal/jannemus_univ_yo_oulu_fi/EkPCovSyBWlOmKkDU_fEN-oBG7jV-ESG2RlcIC4m9gqi3w). There are 47 recordings (6.7GB - 11.6 GB each) which you can extract using [process-mkv.exe](#-1.4-Process-MKVs). You may want to discard a few seconds at the beginning/end of the recording if device is stationary.
