@@ -2,7 +2,7 @@
 The BS3D dataset and the reconstruction framework presented in: <br>
 *BS3D: Building-scale 3D Reconstruction from RGB-D Images* [[arXiv](https://arxiv.org/pdf/2301.01057.pdf)] <br> <br>
 
-<img src="images/overview.jpg" width="500">
+<img src="images/overview.jpg" width="700">
 
 # 1. BS3D dataset
 The BS3D dataset can be download from [[**here**](https://doi.org/10.23729/0100cfe8-3264-4bd9-b1cd-937c1880cdc2)]. The following sections describe the contents of the dataset.
@@ -31,7 +31,7 @@ Images are provided in two coordinate frames: color camera and depth (infrared) 
     <td>Depth maps</td>
     <td>720x1280</td>
     <td>16-bit PNG</td>
-    <td>Sensor depth in millimeters (invalid depth equals 0).</td>
+    <td>Sensor depth in millimeters. Invalid depth equals 0.</td>
 	<td>depth</td>
   </tr>
   </tr>
@@ -39,7 +39,7 @@ Images are provided in two coordinate frames: color camera and depth (infrared) 
     <td>Depth maps (rendered)</td>
     <td>720x1280</td>
     <td>16-bit PNG</td>
-    <td>Depth rendered from the mesh in millimeters (invalid depth equals 0).</td>
+    <td>Depth rendered from the mesh in millimeters. Invalid depth equals 0.</td>
 	<td>depth_render</td>
   </tr>
   </tr>
@@ -95,7 +95,7 @@ Images are provided in two coordinate frames: color camera and depth (infrared) 
     <td>Depth maps</td>
     <td>512x512</td>
     <td>16-bit PNG</td>
-    <td>Raw sensor depth in millimeters (invalid depth equals 0).</td>
+    <td>Raw sensor depth in millimeters. Invalid depth equals 0.</td>
 	<td>depth</td>
   </tr>
   </tr>
@@ -103,7 +103,7 @@ Images are provided in two coordinate frames: color camera and depth (infrared) 
     <td>Depth maps (rendered)</td>
     <td>512x512</td>
     <td>16-bit PNG</td>
-    <td>Depth rendered from a mesh in millimeters (invalid depth equals 0).</td>
+    <td>Depth rendered from a mesh in millimeters. Invalid depth equals 0.</td>
 	<td>depth_render</td>
   </tr>
   </tr>
