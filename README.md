@@ -5,11 +5,11 @@ The BS3D dataset and the reconstruction framework presented in: <br>
 <img src="images/overview.jpg" width="700">
 
 # 1. BS3D dataset
-The BS3D dataset can be download from [[**here**](https://doi.org/10.23729/0100cfe8-3264-4bd9-b1cd-937c1880cdc2)]. The following sections describe the contents of the dataset.
+The BS3D dataset can be downloaded from [[**here**](https://doi.org/10.23729/0100cfe8-3264-4bd9-b1cd-937c1880cdc2)]. The following sections describe the contents of the dataset.
 
 ## 1.1 Campus reconstruction (2 Hz)
 The main reconstruction is under the **campus** subdirectory.
-Images are provided in two coordinate frames: color camera and depth (infrared) camera. For this part, lasers scans were not captured. There are 19981 images which have been rectified. A filename corresponds to a timestamp in seconds.
+Images are provided in two coordinate frames: color camera and depth (infrared) camera. For this part, lasers scans were not captured. There are 19981 images which have been rectified. A filename corresponds to the timestamp in seconds.
 
 ### Color camera frame
 <table>
